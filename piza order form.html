@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <title>Lab 3 - Pizza Form</title>
+</head>
+<body style="background-color: #d3d3d3; font-family: Arial, sans-serif;">
+
+    <form>
+        <fieldset style="border: 2px solid gray; width: 600px; padding: 20px; background-color: #f0f0f0;">
+            <legend align="center">PIZZA ORDER FORM</legend>
+
+            <fieldset style="border: 1px solid gray; margin-bottom: 10px;">
+                <legend>Delivery Address</legend>
+                <table width="100%">
+                    <tr>
+                        <td>Full Name:</td>
+                        <td><input type="text" placeholder="Full Name"></td>
+                        <td>Street Address:</td>
+                        <td><input type="text" placeholder="Address"></td>
+                    </tr>
+                    <tr>
+                        <td>Phone:</td>
+                        <td><input type="tel" placeholder="Phone"></td>
+                        <td>Email:</td>
+                        <td><input type="email" placeholder="Email"></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password" placeholder="Password"></td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset style="border: 1px solid gray; margin-bottom: 10px;">
+                <legend>Payment Information</legend>
+                <table width="100%">
+                    <tr>
+                        <td>Card Type:</td>
+                        <td>
+                            <select>
+                                <option>Visa</option>
+                                <option>Mastercard</option>
+                                <option>Discover</option>
+                            </select>
+                        </td>
+                        <td>Card Number:</td>
+                        <td><input type="text" placeholder="Card Number"></td>
+                    </tr>
+                    <tr>
+                        <td>Name on Card:</td>
+                        <td><input type="text" placeholder="Name"></td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset style="border: 1px solid gray; margin-bottom: 10px;">
+                <legend>Customize Your Pizza</legend>
+                <table width="100%">
+                    <tr>
+                        <td>Pizza size:</td>
+                        <td>
+                            <select>
+                                <option selected>large</option>
+                                <option>medium</option>
+                                <option>small</option>
+                            </select>
+                        </td>
+                        <td>Quantity:</td>
+                        <td><input type="number"></td>
+                    </tr>
+                    <tr>
+                        <td>Spices:</td>
+                        <td colspan="3">
+                           Black pepper <input type="checkbox"> 
+                           Bell peppers <input type="checkbox"> 
+                           mayonnaise <input type="checkbox"> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Other Requirements:</td>
+                        <td><textarea rows="3" placeholder="Any Other  
+                            Requirements"></textarea></td>
+                        <td colspan="4" valign="bottom">
+                            Meat: 
+                           Fish <input type="radio" name="meat"> 
+                           Cow <input type="radio" name="meat"> 
+                           Chicken <input type="radio" name="meat"> 
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <button type="reset">Clear Order</button>
+            <button type="submit">Place Order</button>
+
+        </fieldset>
+    </form>
+
+</body>
+</html>
