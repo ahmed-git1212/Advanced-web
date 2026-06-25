@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Circle Constructor</title>
+</head>
+<body>
+
+    <h2>Circle Constructor Program</h2>
+
+    <p id="area"></p>
+    <p id="perimeter"></p>
+
+    <script>
+
+        function Circle(radius) {
+            this.radius = radius;
+
+            this.getArea = function () {
+                return Math.PI * this.radius * this.radius;
+            };
+
+            this.getPerimeter = function () {
+                return 2 * Math.PI * this.radius;
+            };
+        }
+
+        let circy = new Circle(11);
+        document.getElementById("area").innerHTML =
+            "Area of Circle (radius 11) = " + circy.getArea();
+
+        let circy2 = new Circle(4.44);
+        document.getElementById("perimeter").innerHTML =
+            "Perimeter of Circle (radius 4.44) = " + circy2.getPerimeter();
+
+    </script>
+
+</body>
+</html>

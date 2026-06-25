@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send Message Form</title>
+
+    <style>
+
+        body{
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        .container{
+            width: 450px;
+            margin: 20px auto;
+            background-color: #eeeeee;
+            padding: 20px;
+        }
+
+        h1{
+            font-size: 30px;
+        }
+
+        label{
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        input, textarea{
+            width: 85%;
+            padding: 12px;
+            box-sizing: border-box;
+        }
+
+        textarea{
+            height: 80px;
+        
+        }
+
+        button{
+            width: 90%;
+            padding: 15px;
+            height: 45px;
+            background-color: black;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .error{
+            color: red;
+            margin-top: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Send Message</h1>
+
+    <form id="myForm">
+
+        <label>Name:</label>
+        <input type="text" id="name">
+
+        <label>Email:</label>
+        <input type="text" id="email" placeholder="gappscourses+100@gmail.com ">
+
+        <label>Message:</label>
+        <textarea id="phone" placeholder="Hello World "></textarea>
+
+        <button type="submit">
+            Send Message
+        </button>
+
+    </form>
+
+</div>
+
+<script>
+
+document.getElementById("myForm")
+.addEventListener("submit", submitter);
+
+function submitter(e){
+
+    e.preventDefault();
+
+    let name =
+    document.getElementById("name");
+
+    let email =
+    document.getElementById("email");
+
+    let phone =
+    document.getElementById("phone");
+
+    let errors = "";
+
+    name.style.border = "";
+    email.style.border = "";
+    phone.style.border = "";
+
+    if(name.value.trim() == ""){
+        errors += "Name is required.<br>";
+        name.style.border = "2px solid red";
+    }
+
+    if(email.value.trim() == ""){
+        errors += "Email is required.<br>";
+        email.style.border = "2px solid red";
+    }
+
+    if(phone.value.trim() == ""){
+        errors += "Message is required.<br>";
+        phone.style.border = "2px solid red";
+    }
+
+    let oldError =
+    document.getElementById("errorBox");
+
+    if(oldError){
+        oldError.remove();
+    }
+
+    if(errors != ""){
+
+        let div =
+        document.createElement("div");
+
+        div.id = "errorBox";
+        div.className = "error";
+        div.innerHTML = errors;
+
+        document.querySelector(".container")
+        .appendChild(div);
+
+        setTimeout(function(){
+
+            div.remove();
+
+            name.style.border = "";
+            email.style.border = "";
+            phone.style.border = "";
+
+        },3000);
+
+        return;
+    }
+
+    let data = {
+
+        name: name.value,
+        email: email.value,
+        message: phone.value
+
+    };
+
+    console.log(data);
+
+    alert("Form Submitted Successfully");
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Percentage of World Population</title>
+</head>
+<body>
+
+<h2>Percentage of World Population</h2>
+
+<p id="output"></p>
+
+<script>
+
+
+function percentageOfWorld1(population){
+    return (population / 7900) * 100;
+}
+
+let tanzania1 = percentageOfWorld1(65);
+let kenya1 = percentageOfWorld1(55);
+let uganda1 = percentageOfWorld1(49);
+
+
+const percentageOfWorld2 = function(population){
+    return (population / 7900) * 100;
+};
+
+let tanzania2 = percentageOfWorld2(65);
+let kenya2 = percentageOfWorld2(55);
+let uganda2 = percentageOfWorld2(49);
+
+
+const percentageOfWorld3 = (population) => {
+    return (population / 7900) * 100;
+};
+
+let tanzania3 = percentageOfWorld3(65);
+let kenya3 = percentageOfWorld3(55);
+let uganda3 = percentageOfWorld3(49);
+
+
+document.getElementById("output").innerHTML =
+
+"<b>Function Declaration:</b><br>" +
+"Tanzania = " + tanzania1 + "%<br>" +
+"Kenya = " + kenya1 + "%<br>" +
+"Uganda = " + uganda1 + "%<br><br>" +
+
+"<b>Function Expression:</b><br>" +
+"Tanzania = " + tanzania2 + "%<br>" +
+"Kenya = " + kenya2 + "%<br>" +
+"Uganda = " + uganda2 + "%<br><br>" +
+
+"<b>Arrow Function:</b><br>" +
+"Tanzania = " + tanzania3 + "%<br>" +
+"Kenya = " + kenya3 + "%<br>" +
+"Uganda = " + uganda3 + "%";
+
+</script>
+
+</body>
+</html>
